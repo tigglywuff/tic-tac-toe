@@ -24,7 +24,7 @@ function action(r, c) {
         e.innerHTML = nextPlayer;
         nextPlayer = (nextPlayer === "x") ? "o" : "x";
         gameOver = isGameOver(r, c);
-        if (numMoves >= 9) {
+        if (!gameOver && numMoves >= 9) {
             announce("draw");
         }
     }
